@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--약리스트를 위한 xml 중 하나-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
-
+<!--밑에 태그는 이미지를 동그랗게 출력해주는 태그이고 gradle에
+    implementation 'de.hdodenhof:circleimageview:2.2.0' 을 반드시 포함하여야 합니다.-->
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/imageView"
         android:layout_width="100dp"
@@ -13,6 +15,7 @@
         android:src="@mipmap/irene_0706"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="300dp"

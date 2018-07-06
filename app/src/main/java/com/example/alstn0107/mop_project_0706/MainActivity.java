@@ -1,21 +1,26 @@
 package com.example.alstn0107.mop_project_0706;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-        //implements NavigationView.OnNavigationItemSelectedListener  {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_layout);
-
+        setContentView(R.layout.activity_main);
+        /*   리스트뷰를 띄운다 그 리스트 뷰는 왼쪽에 사진 아이린 오른쪽에 텍스트로 구성되어 있다.
+        setContentView(R.layout.image_main);   //list_layout 일수도 있음
         String[] items = {"망고 쥬스", "토마토 쥬스", "포도 쥬스"};
         ListAdapter adapter = new ImageAdapter(this, items);
         ListView listView = (ListView) findViewById(R.id.listView);
@@ -30,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-/*
+        */
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -43,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -55,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -105,10 +110,10 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    */
+
     }
 }
 
