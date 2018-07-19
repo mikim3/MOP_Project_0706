@@ -9,6 +9,15 @@
     tools:showIn="@layout/app_bar_main">
 <!--처음 앱을 키고 나면 무슨 화면이 콘텐츠로 들어갈지 정하는 .xml입니다.-->
 
+
+    <FrameLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/main_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
     <ImageView
         android:id="@+id/main_doctorimage"
         android:layout_width="match_parent"

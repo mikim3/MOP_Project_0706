@@ -63,12 +63,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 if(item.getItemId()==R.id.nav_camera){
-                    System.out.println("카메라클릭");
+                    getFragmentManager().beginTransaction().replace(R.id.main_frameLayout,new FirstFragment()).commit();
                 }
                 if(item.getItemId()==R.id.nav_slideshow){
-                    System.out.println("슬라이드쇼");
-                }
+                    getFragmentManager().beginTransaction().replace(R.id.main_frameLayout,new SecondFragment()).commit();
 
+                }
                 drawerLayout.closeDrawer(GravityCompat.START);
 
                 return true;

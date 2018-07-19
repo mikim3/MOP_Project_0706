@@ -11,11 +11,11 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="낱알검색" />
+            android:title="낱알검색갤러리" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="예약" />
+            android:title="예약슬라이드쇼" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
