@@ -12,15 +12,16 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="10dp"
-        android:src="@mipmap/irene_0706"
+        android:src="@drawable/cannot_find_pill"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp" />
 
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/pillname"
         android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:layout_margin="10dp"
-        android:text="TextView"
+        android:text="pillname"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 </LinearLayout>
