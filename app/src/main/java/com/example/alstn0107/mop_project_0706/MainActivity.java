@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -99,13 +98,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(getApplicationContext(), "nav_gallery", Toast.LENGTH_SHORT).show();
 
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_bookmark) {
+            Toast.makeText(getApplicationContext(), "nav_bookmark클릭 북마크 페이지로 넘어 갑니다.", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this,Bookmark.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_search_result) {
+            Toast.makeText(getApplicationContext(), "nav_search_result", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this,Search_result.class);
+            startActivity(intent);
 
-            Toast.makeText(getApplicationContext(), "nav_slideshow", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_memo) {
-
-            Toast.makeText(getApplicationContext(), "nav_memo", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_image_search) {
 
@@ -117,12 +118,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent= new Intent(MainActivity.this,Search.class);
             //화면전환하기  인자 intent가 화면전환에대한 정보를 가지고 있음
             startActivity(intent);
+            //인텐트를 할떄 Mainfest에 반드시
+            //        <activity android:name=".Search"></activity>를 추가해 줍시다. 이걸로 2시간을 날렸네요
         } else if (id == R.id.nav_send) {
-
             Toast.makeText(getApplicationContext(), "nav_send", Toast.LENGTH_SHORT).show();
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main);
         drawer.closeDrawer(GravityCompat.START);
         return true;

@@ -13,13 +13,13 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="낱알검색갤러리" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="예약슬라이드쇼" />
+            android:id="@+id/nav_bookmark"
+            android:icon="@drawable/baseline_bookmark_black_18dp"
+            android:title="북마크" />
         <item
-            android:id="@+id/nav_memo"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="메모" />
+            android:id="@+id/nav_search_result"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="임시로만드는 검색결과 개발자를 위해 만들어둡니다" />
         <item
             android:id="@+id/nav_piil_search"
             android:icon="@drawable/ic_menu_manage"
