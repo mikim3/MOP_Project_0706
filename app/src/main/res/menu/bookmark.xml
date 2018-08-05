@@ -4,15 +4,15 @@
 <!--bookmark는 -->
     <item
         android:id="@+id/nav_bookmark_on"
-        android:icon="@drawable/baseline_bookmark_black_18dp"
-        android:title="예약슬라이드쇼"
+        android:icon="@drawable/bookmark_not_clicked"
+        android:title="북마크 안누름"
         app:showAsAction="always"
         />
     <item
         android:id="@+id/nav_bookmark_off"
-        android:icon="@drawable/baseline_bookmark_black_18dp"
-        android:title="예약슬라이드쇼"
-        app:showAsAction="never"
+        android:icon="@drawable/bookmark_clicked_red"
+        android:title="북마크 누른뒤"
+        app:showAsAction="always"
         />
 
 

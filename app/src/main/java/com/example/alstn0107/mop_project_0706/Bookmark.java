@@ -8,6 +8,9 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class Bookmark extends AppCompatActivity {
+
+    MenuItem bookmarkon,bookmarkoff;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,13 +35,12 @@ public class Bookmark extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.bookmark, menu);
-
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle presses on the action bar items
+        bookmarkoff = (MenuItem)findViewById(R.id.nav_bookmark_off);
         switch (item.getItemId()) {
             case R.id.nav_bookmark_on:
                 onBookmark();
@@ -50,15 +52,13 @@ public class Bookmark extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
     private void onBookmark() {
         Toast.makeText(Bookmark.this, "onbookmark", Toast.LENGTH_SHORT).show();
 
     }
-
-
     private void offBookmark() {
         Toast.makeText(Bookmark.this, "offbookmark", Toast.LENGTH_SHORT).show();
 
     }
+
 }
