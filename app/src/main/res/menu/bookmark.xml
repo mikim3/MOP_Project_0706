@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<!--bookmark는 -->
+<!--orderInCategory="2"이러면 왼쪽부터 두번쨰로 배치 된다.  showAsAction 으로 icon을 내보낼지 text보낼지 flow를 보낼지 결정 -->
     <item
         android:id="@+id/nav_bookmark_on"
         android:icon="@drawable/bookmark_not_clicked"
         android:title="북마크 안누름"
         app:showAsAction="always"
+        app:actionViewClass="ToggleButton"
+        android:orderInCategory="2"
         />
     <item
         android:id="@+id/nav_bookmark_off"
         android:icon="@drawable/bookmark_clicked_red"
         android:title="북마크 누른뒤"
         app:showAsAction="always"
+        android:orderInCategory="1"
         />
+
 
 
 </menu>

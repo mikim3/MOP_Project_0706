@@ -9,13 +9,16 @@ import android.widget.Toast;
 
 public class Bookmark extends AppCompatActivity {
 
-    MenuItem bookmarkon,bookmarkoff;
+    private MenuItem bookmark_clicked;
+    private MenuItem bookmark_no_clicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bookmark); // bookmark로바꾸자
 
+
+        menu.findItem()
         ActionBar ab = getSupportActionBar() ;
         ab.setTitle("북마크") ;
 /*
@@ -40,7 +43,7 @@ public class Bookmark extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        bookmarkoff = (MenuItem)findViewById(R.id.nav_bookmark_off);
+
         switch (item.getItemId()) {
             case R.id.nav_bookmark_on:
                 onBookmark();
