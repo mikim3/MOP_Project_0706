@@ -18,7 +18,7 @@ public class Bookmark extends AppCompatActivity {
         setContentView(R.layout.bookmark); // bookmark로바꾸자
 
 
-        menu.findItem()
+    //    menu.findItem()
         ActionBar ab = getSupportActionBar() ;
         ab.setTitle("북마크") ;
 /*
