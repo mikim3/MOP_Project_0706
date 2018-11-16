@@ -21,6 +21,11 @@
         <activity android:name=".Search"></activity>
         <activity android:name=".Bookmark"></activity>
         <activity android:name=".Search_result"></activity>
+        <activity android:name=".PillSearch"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 

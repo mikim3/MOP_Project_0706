@@ -19,9 +19,9 @@
         <item
             android:id="@+id/nav_search_result"
             android:icon="@drawable/ic_search_black_24dp"
-            android:title="임시로만드는 검색결과 개발자를 위해 만들어둡니다" />
+            android:title="임시 검색결과" />
         <item
-            android:id="@+id/nav_piil_search"
+            android:id="@+id/nav_pill_search"
             android:icon="@drawable/ic_menu_manage"
             android:title="낱알검색" />
 
@@ -30,9 +30,15 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="이미지검색" />
         <item
+            android:id="@+id/nav_pill_search_text"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="임시용 텍스트 약검색" />
+        <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_menu_manage"
             android:title="설정" />
+
+
     </group>
 
     <item android:title="Communicate">

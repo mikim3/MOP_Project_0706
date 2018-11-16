@@ -10,11 +10,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     private DrawerLayout drawerLayout;
+    private ImageButton mGalleryButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        mGalleryButton= (ImageButton) findViewById(R.id.galley_button);
         drawerLayout = (DrawerLayout) findViewById(R.id.main);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -49,6 +52,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.main_navigationView);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mGalleryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //갤러리가 뜨게끔해야함
+
+            }
+        });
     }
 
     @Override
@@ -96,8 +107,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(getApplicationContext(), "nav_gallery", Toast.LENGTH_SHORT).show();
-
-
         } else if (id == R.id.nav_bookmark) {
             Toast.makeText(getApplicationContext(), "nav_bookmark클릭 북마크 페이지로 넘어 갑니다.", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this,Bookmark.class);
@@ -112,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             Toast.makeText(getApplicationContext(), "nav_image_search", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_piil_search) {
+        } else if (id == R.id.nav_pill_search) {
             Toast.makeText(getApplicationContext(), "nav_pill_search클릭 낱알검색으로 갑니다.", Toast.LENGTH_SHORT).show();
             //화면을 전환할때 사용하는 클래스 첫 번째 인자 값은 이동전 activity 두번쨰는 이동할 액티비티 .class
             Intent intent= new Intent(MainActivity.this,Search.class);
@@ -120,7 +129,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
             //인텐트를 할떄 Mainfest에 반드시
             //        <activity android:name=".Search"></activity>를 추가해 줍시다. 이걸로 2시간을 날렸네요
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_pill_search_text) {
+            Toast.makeText(getApplicationContext(), "nav_pill_search_text클릭 텍스트검색으로 갑니다.", Toast.LENGTH_SHORT).show();
+            //화면을 전환할때 사용하는 클래스 첫 번째 인자 값은 이동전 activity 두번쨰는 이동할 액티비티 .class
+            Intent intent= new Intent(MainActivity.this,PillSearch.class);
+            //화면전환하기  인자 intent가 화면전환에대한 정보를 가지고 있음
+            startActivity(intent);
+            //인텐트를 할떄 Mainfest에 반드시
+            //        <activity android:name=".Search"></activity>를 추가해 줍시다. 이걸로 2시간을 날렸네요
+        }else if (id == R.id.nav_send) {
             Toast.makeText(getApplicationContext(), "nav_send", Toast.LENGTH_SHORT).show();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main);

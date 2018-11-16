@@ -9,9 +9,10 @@
 <!--밑에 태그는 이미지를 동그랗게 출력해주는 태그이고 gradle에
     implementation 'de.hdodenhof:circleimageview:2.2.0' 을 반드시 포함하여야 합니다.-->
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/imageView"
+        android:id="@+id/pill_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
@@ -19,26 +20,25 @@
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/pillname"
+        app:layout_constraintEnd_toStartOf="@+id/item_name"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_alignParentLeft="true" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <TextView
-        android:id="@+id/pillname"
+        android:id="@+id/item_name"
         android:layout_width="176dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView16"
-        android:layout_alignStart="@+id/textView16"
+        android:layout_above="@+id/company_name"
+        android:layout_alignStart="@+id/company_name"
         android:layout_marginBottom="-60dp"
         android:text="pillname"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/company_name"
         android:layout_width="89dp"
         android:layout_height="29dp"
         android:layout_alignParentTop="true"
